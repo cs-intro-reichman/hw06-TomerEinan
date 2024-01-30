@@ -149,9 +149,14 @@ public class Runigram {
 	 * and (1 - alpha) part the second image.
 	 * The two images must have the same dimensions.
 	 */
-	public static Color[][] blend(Color[][] image1, Color[][] image2, double alpha) {
-		//// Replace the following statement with your code
-		return null;
+	public static Color[][] blend2(Color[][] image1, Color[][] image2, double alpha) {
+    	Color[][] blendim = new Color[image1.length][image1[0].length];
+    	for (int i = 0; i < image1.length; i++) {
+        	for (int k = 0; k < image1[0].length; k++) {
+            	blendim[i][k] = blend(image1[i][k], image2[i][k], alpha);
+        	}
+    	}
+    	return blendim;
 	}
 
 	/**
