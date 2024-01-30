@@ -1,7 +1,7 @@
 // This class uses the Color class, which is part of a package called awt,
 // which is part of Java's standard class library.
 import java.awt.Color;
-
+import edu.princeton.cs.introcs.In;
 /** A library of image processing functions. */
 public class Runigram {
 
@@ -56,7 +56,6 @@ public class Runigram {
         System.out.printf("%3s",  c.getBlue());  // Prints the blue component
         System.out.print(")  ");
 	}
-
 	// Prints the pixels of the given image.
 	// Each pixel is printed as a triplet of (r,g,b) values.
 	// This function is used for debugging purposes.
