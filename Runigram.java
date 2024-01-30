@@ -1,7 +1,6 @@
 // This class uses the Color class, which is part of a package called awt,
 // which is part of Java's standard class library.
 import java.awt.Color;
-import edu.princeton.cs.introcs.In;
 /** A library of image processing functions. */
 public class Runigram {
 
