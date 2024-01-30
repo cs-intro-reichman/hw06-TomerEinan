@@ -108,8 +108,13 @@ public class Runigram {
 	 * Returns an image which is the grayscaled version of the given image.
 	 */
 	public static Color[][] grayScaled(Color[][] image) {
-		//// Replace the following statement with your code
-		return null;
+		Color [][] grayim = new Color [image.length][image[0].length];
+		for (int i = 0; i <image.length; i++){
+			for(int k = 0; k < image[0].length; k++){
+				grayim[i][k] = luminance(image[i][k]);
+			}
+		} 
+		return grayim;
 	}	
 	
 	/**
@@ -117,14 +122,14 @@ public class Runigram {
 	 * The image is scaled (resized) to have the given width and height.
 	 */
 	public static Color[][] scaled(Color[][] image, int width, int height) {
-		Color [][] scaled = new Color [image.length][image[0].length];
+		Color [][] scaledim = new Color [image.length][image[0].length];
 		for (int i = 0; i <image.length; i++){
 			for(int k = 0; k < image[0].length; k++){
-				scaled[(int)i/width][(int)k/height] = image[i][k];
+				scaledim[(int)i/width][(int)k/height] = image[i][k];
 			}
 		} 
 		//// Replace the following statement with your code
-		return null;
+		return scaledim;
 	}
 	
 	/**
