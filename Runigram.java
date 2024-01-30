@@ -60,23 +60,37 @@ public class Runigram {
 	// For example, to check that some image processing function works correctly,
 	// we can apply the function and then use this function to print the resulting image.
 	private static void print(Color[][] image) {
-		//// Replace this comment with your code
+		for (int i = 0; i < image.length; i++){
+			for(int k = 0; k < image[i].length; k++){
+				System.out.println(image[i][k]);
+			}
+		}
 	}
 	
 	/**
 	 * Returns an image which is the horizontally flipped version of the given image. 
 	 */
 	public static Color[][] flippedHorizontally(Color[][] image) {
-		//// Replace the following statement with your code
-		return null;
+		Color[][] newimage = new Color[image.length][image[0].length];
+		for (int i = image.length - 1; i > -1; i--){
+			for (int k = 0; k < image[i].length; k++){
+				newimage[i][k] = image[i][k];
+			}
+		}
+		return newimage;
 	}
 	
 	/**
 	 * Returns an image which is the vertically flipped version of the given image. 
 	 */
 	public static Color[][] flippedVertically(Color[][] image){
-		//// Replace the following statement with your code
-		return null;
+		Color[][] newimage = new Color[image.length][image[0].length];
+		for (int i = image.length - 1; i > -1; i--){
+			for (int k = 0; k < image[i].length; k++){
+				newimage[k][i] = image[k][i];
+			}
+		}
+		return newimage;
 	}
 	
 	// Computes the luminance of the RGB values of the given pixel, using the formula 
